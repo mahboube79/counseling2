@@ -1,0 +1,408 @@
+@font-face {
+    font-family: 'koodak';
+    src: url('../fonts/KoodakBold.eot?#')format('eot'), url('../fonts/KoodakBold.ttf')format('truetype'), url('../fonts/KoodakBold.woff')format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nazanin';
+    src: url('../fonts/Nazanin.eot?#')format('eot'), url('../fonts/Nazanin.ttf')format('truetype'), url('../fonts/Nazanin.woff')format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'yekan';
+    src: url('../fonts/Yekan.eot?#')format('eot'), url('../fonts/Yekan.ttf')format('truetype'), url('../fonts/Yekan.woff')format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Navbar  */
+
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+    color: rgb(173, 24, 181) !important;
+}
+
+.nav-link {
+    font-family: 'koodak' !important;
+}
+
+.navbar-brand {
+    font-family: 'yekan' !important;
+}
+
+
+/* End Navbar  */
+
+
+/* Home */
+
+.landing {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.home-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+.home-inner {
+    position: fixed;
+    top: 0;
+    left:  0;
+    width: 100%;
+    height: 100%;
+    background: url(../../media/images/bg/dark_tint.png),url(../../media/images/bg/5.jpg);
+    background-size: cover;
+    background-position: center center;
+    
+}
+
+.caption {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    z-index: 1;
+    color: #fff;
+}
+
+.caption h1 {
+    font-family: 'yekan';
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    text-shadow: 0.1rem 0.1rem 0.8rem #aaaaaa;
+    padding-bottom: 1rem;
+}
+
+.caption h3 {
+    font-family: koodak;
+    font-size: 2rem;
+    text-shadow: 0.1rem 0.1rem 0.5rem #a1a0a0;
+    padding-bottom: 1.6rem;
+}
+
+.caption .btn-start {
+    font-family: 'koodak';
+    background-color: rgba(0, 255, 225, 0.3);
+    box-shadow: 1px 1px 3px #aaaaaa;
+    font-size: 1.2rem;
+    letter-spacing: 0.08rem;
+    border-width: 0.1rem;
+    border-radius: 0;
+    padding: 0.5rem 1rem;
+}
+
+
+/* End Home */
+
+
+/* Tests */
+
+.area {
+    margin: 0 auto;
+    padding: 4rem 2rem 1rem;
+}
+
+.area h2 {
+    font-size: 2.4rem;
+    font-family: 'yekan';
+}
+
+.area p {
+    font-family: 'nazanin';
+}
+
+.btn-secondary {
+    border-width: 0.1rem;
+    border-radius: 2px;
+    font-size: 1.2rem;
+    padding: 0.6rem 1.2rem;
+    margin: 1rem;
+    color: #fff;
+    background-color: #1ebba3;
+    border-color: #1ebba3;
+    box-shadow: 2px 2px 4px #616060;
+}
+
+.btn-secondary:hover{
+    background-color: #169c88;
+    border-color: #169c88;
+}
+
+/* End Tests */
+
+
+
+/* Servieces */
+
+.jumbotron {
+    margin-bottom: 0;
+    padding: 2rem 0 3.5rem;
+    border-radius: 0;
+    background-color: #11e2b5f7;
+    
+    
+}
+
+h2.title {
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: 'yekan';
+    color: #fff;
+}
+
+.underline {
+    width: 20rem;
+    height: 0.2rem;
+    background-color: #fff;
+    margin: 1rem auto 2rem;
+}
+
+.service i {
+    color: #ffffff;
+}
+
+.service h3 {
+    font-family: yekan;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding-bottom: 0.4rem;
+    color: #fff;
+}
+
+.service p {
+    font-family: nazanin;
+    font-size: 1.1rem;
+    color: #fff;
+}
+/* End Servieces */
+
+
+
+/* Product Group */
+
+#product-group {
+    z-index: 100;
+}
+
+.group-backgroun {
+    position: relative;
+}
+
+.fixed-wrap {
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1 !important;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-image: url(../../media/images/bg/1.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.group-backgroun .dark {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: 7rem 2rem;
+}
+
+
+/* End Product Group */
+
+
+/* Consultants */
+
+#consultants img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+blockquote {
+    text-align: justify;
+    font-family: 'koodak';
+    font-size: 1rem;
+}
+
+blockquote i {
+    color: #1ebba3;
+    margin: 1rem;
+}
+
+.consultant-hr {
+    border-bottom: 0.1rem solid #1ebba3;
+}
+
+
+/* End Consultants */
+
+
+/* Author */
+
+#authors .jumbotron {
+    padding: 1rem 0 3rem;
+}
+
+.authors .card {
+    border-radius: 0;
+    box-shadow: 2px 2px 5px #1ebba3;
+    margin: 1rem 0;
+}
+
+.authors .card:hover {
+    background-color: #169c88;
+}
+
+.authors .card:hover i,
+.authors .card:hover h3,
+.authors .card:hover p {
+    color: #fff;
+}
+
+.card-body .img-fluid {
+    margin-top: -75px;
+}
+
+.card-body h3 {
+    font-family: 'yekan';
+    font-size: 1.5rem;
+    color: #000;
+    font-weight: 800;
+}
+
+.card-body h5 {
+    font-family: 'nazanin';
+    font-size: 1rem;
+    color: #000;
+    font-weight: bolder;
+}
+
+.card-body p {
+    font-family: 'yekan';
+    font-size: 0.9rem;
+    text-align: justify;
+}
+
+.card-body i {
+    color: #000;
+    font-size: 1.8rem;
+}
+
+.card-body i:hover {
+    color: #000 !important;
+    font-size: 1.8rem;
+}
+
+
+/* End Author */
+
+
+/* Footer */
+
+footer {
+    padding: 2rem 0;
+    background-color: #343a40;
+    color: #fff;
+}
+
+footer img {
+    height: 3rem;
+    margin: 1.6rem;
+}
+
+footer p {
+    font-family: 'yekan';
+}
+
+footer i {
+    color: #fff;
+    font-size: 1.8rem;
+    margin: 1.2rem 0.5rem 0 0;
+}
+
+footer i:hover {
+    color: #1ebba3;
+}
+
+.footer-hr {
+    width: 100%;
+    border-top: 0.2rem solid #666b71;
+    margin-top: 3rem;
+}
+
+.aryasoft-title {
+    color: #1ebba3;
+}
+
+
+/* Fab Btn */
+
+.btn-group-fab {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: auto;
+}
+
+.btn-group-fab .btn {
+    border-radius: 50%;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+}
+
+.btn-group-fab .btn-main {
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    line-height: 2;
+}
+
+.btn-group-fab .btn-sub {
+    right: 50%;
+    bottom: 0;
+    z-index: 1;
+    margin-right: -20px;
+    transition: all 0.6s;
+}
+
+.btn-group-fab.active .btn-sub:nth-child(2) {
+    bottom: 60px;
+}
+
+.btn-group-fab.active .btn-sub:nth-child(3) {
+    bottom: 110px;
+}
+
+.btn-group-fab.active .btn-sub:nth-child(4) {
+    bottom: 160px;
+}
+
+
+/* End Fab Btn */
