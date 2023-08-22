@@ -13,9 +13,8 @@
 
         {{image_formset.management_form}}
         {% for form in image_formset %}
-            {% comment %} {{form |crispy}} {% endcomment %}
+            {% comment %} {{form | crispy}} {% endcomment %}
             {{form }}
-            {% comment %} {% crispy form %} {% endcomment %}
 
         {% endfor %}
         <br>
