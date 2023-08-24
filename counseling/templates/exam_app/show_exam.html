@@ -1,0 +1,22 @@
+{% extends 'mainTemplate.html' %}
+
+
+
+
+    {%block body%}
+    <div style="padding: 200px;">
+        <form action="" method="GET">
+            {% csrf_token %}
+            <ol> 
+                {{form.as_ul}}
+                {% comment %} {{form.lable}} {% endcomment %}
+
+            </ol>
+            <input type="submit">
+        </form>
+    </div>
+            
+
+    {%endblock body%}
+
+
