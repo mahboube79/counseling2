@@ -3,7 +3,6 @@ from django.db import models
 class ResultExam(models.Model):
     name=models.CharField(max_length=200)
     family=models.CharField(max_length=200)
-    age=models.IntegerField()
     ress1=models.IntegerField()
     ress2=models.IntegerField()
     ress3=models.IntegerField()

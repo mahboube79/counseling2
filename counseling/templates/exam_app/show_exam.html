@@ -4,15 +4,19 @@
 
 
     {%block body%}
-    <div style="padding: 200px;">
-        <form action="" method="GET">
+    
+    <div class="body_size container">
+        <div class="row">
+            <h1 class="h-font">{{lable}} : <span id="ooo">{{titr}}</span></h1>
+            {% comment %} <h2 class="h-font"></h2> {% endcomment %}
+        </div>
+        <form action="" method="POST">
             {% csrf_token %}
             <ol> 
                 {{form.as_ul}}
-                {% comment %} {{form.lable}} {% endcomment %}
-
             </ol>
-            <input type="submit">
+            <br>
+            <input class="btn btn-primary btn-block in-bt container" type="submit" value="ثبت آزمون">
         </form>
     </div>
             

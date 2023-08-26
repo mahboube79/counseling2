@@ -1,0 +1,69 @@
+
+/* all Exam */
+.body_size{
+    padding-top:90px;
+    padding-bottom:90px;
+
+}
+
+.butten-a{
+    text-decoration: none;
+    color:black !important ;
+    font-family: 'nazanin';
+    font-weight: bold;
+    font-size: x-large;
+
+}
+.mmm{
+    padding-right: -50px !important;
+}
+.img-mar{
+    width: 450px;
+}
+
+.h-font{
+    font-family: 'yekan';
+
+}
+.p-font{
+    
+    font-family: 'nazanin';
+    text-align: justify;
+    line-height: 45px;
+    font-size: 20px;
+    /* word-spacing: 2px; */
+}
+
+.div-btnn{
+    background-color: gold !important;
+    border-color: gold !important;
+    height: 57px;
+    width: 450px;
+}
+
+/* ---------------------Exams---------------------------------------- */
+
+label{
+    display: block;
+    font-family: 'nazanin';
+    line-height: 30px;
+    font-size: 20px;
+    word-spacing: 2px;
+}
+
+.form-check-inline{
+    word-spacing: 100px !important;
+}
+.ch>div{
+    padding:10px 10px 10px 180px ;
+}
+#ooo{
+    /* vertical-align: sub; */
+    vertical-align: middle;
+    font-size: 25px;
+
+}
+.in-bt{
+    height: 57px;
+    width: 450px !important;
+}

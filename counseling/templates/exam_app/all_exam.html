@@ -3,17 +3,28 @@
 
 
 {%block home%}
-<div style="width:500px; height:500px; padding:200px; ">
-    <div>
-        <div><a href="{%url 'exam:exam1'%}">آزمون اول</a></div>
-        <div><a href="{%url 'exam:exam2'%}">آزمون دوم</a></div>
-        <div><a href="{%url 'exam:exam3'%}">آزمون سوم</a></div>
-        <div><a href="{%url 'exam:exam4'%}">آزمون چهارم</a></div>
-        <div><a href="{%url 'exam:exam5'%}">آزمون پنجم</a></div>
-        <div><a href="{%url 'exam:exam6'%}">آزمون ششم</a></div>
-        <div><a href="{%url 'exam:exam7'%}">آزمون هفتم</a></div>
-        <div><a href="{%url 'exam:exam8'%}">آزمون هشتم</a></div>
-    
+<div class="body_size container">
+    <h1 class="h-font">آزمون استعداد و هوش برتر </h1><br>
+    <div class="row container " >
+        <div class="col-md-7">
+            <p class="p-font">استعداد یابی کودک می تواند از مهم ترین وظایفی باشد که همه والدین باید به آن توجه ویژه ای داشته باشند.
+                وقتی متوجه شوید فرزندانتان در چه زمینه ای با استعداد است 
+                دیگر او را به سمت انبوهی از کلاس های آموزشی سوق نمی دهید 
+                و او را دچار تشویش و سرگردانی نمی کنید، از همان کودکی با تشخیص درست، به
+                 استعداد وهوش های برتر او پی می برید و مطمئنا
+                از همان ابتدا کودک خود را در مسیر درست و متناسب با خودش هدایت می کنید.
+                <br>این پرسشنامه شامل 50 سوال چهارگزینه ای است که در قالب 8 آزمون طراحی شده است.
+                هر یک از سوالات را با دقت بخوانید و پاسخی که بیشترین تطبیق را با کودک شما دارد علامت بزنید.
+            </p><br>
+        </div>
+        <div class="col-md-4">
+            <img src="/media/images/login/4.jpg" class="img-mar" alt="photo">
+        </div>
+        <div class="btn btn-success btn-block div-btnn container" >
+            <a class="butten-a btn-block" href="{%url 'exam:exam1'%}">شروع آزمون</a>
+        </div>
     </div>
 </div>
+
+<p>{{resss}}</p>
 {%endblock home%}
