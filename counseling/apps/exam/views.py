@@ -2,6 +2,9 @@ from django.shortcuts import render , redirect
 from .forms import Exam1,Exam2,Exam3,Exam4,Exam5,Exam6,Exam7,Exam8
 from .models import ResultExam
 from django.contrib.auth.decorators import login_required
+import matplotlib.pyplot as plt
+from io import BytesIO
+import base64
 
 dic={
     'ress1':'',
@@ -14,10 +17,11 @@ dic={
     'ress8':'',    
 }
 
+@login_required
 def all_exam(request):
     return render(request,"exam_app/all_exam.html")
     
-  
+# ----------------------------------------------------------------------------------  
 def exam1(request):
     context={}
     if request.method == "POST":
@@ -37,7 +41,6 @@ def exam1(request):
         'form':form,
         'lable':'آزمون اول',
         'titr':'استعداد زبانی',
-        'dic':dic
     }   
     return render(request,"exam_app/show_exam.html",context)
 
@@ -185,7 +188,7 @@ def exam8(request):
             n+=1
             sum+=q
         dic['ress8']=sum    
-        return render(request,"exam_app/all_exam.html",context)
+        return redirect('exam:showResult')
     else:
         form=Exam8
     context={
@@ -195,8 +198,7 @@ def exam8(request):
     }     
     return render(request,"exam_app/show_exam.html",context)
 
-
-
+# ----------------------------------------------------------------------------------  
 def showResult(request):
     resultexam=ResultExam()
     resultexam.name=request.user.name
@@ -211,6 +213,32 @@ def showResult(request):
     resultexam.ress8=dic['ress8']
     resultexam.save()
     context={
-        'resss':resultexam
+        'res':resultexam
     }
-    return render(request,"exam_app/all_exam.html",context)
+    return redirect('exam:ressChart')
+
+# ----------------------------------------------------------------------------------  
+def ressChart(request):
+    finallyress=ResultExam.objects.all()
+    counts=[]
+    for item in finallyress:
+        if item.name==request.user.name and item.family==request.user.family:
+            counts.append(item.ress1)
+            counts.append(item.ress2)
+            counts.append(item.ress3)
+            counts.append(item.ress4)
+            counts.append(item.ress5)
+            counts.append(item.ress6)
+            counts.append(item.ress7)
+            counts.append(item.ress8)
+    lable=['زبانی','منطقی-ریاضی','فضائی','بدنی-جنبشی','موسیقی','طبیعت گرا','بین فردی','درون فردی']
+    plt.rcParams['font.family'] = 'B yekan'
+    plt.pie(counts, labels=lable, autopct='%1.1f%%')
+    plt.title('')
+    buffer = BytesIO()
+    plt.savefig(buffer, format='png')
+    buffer.seek(0)
+    image_base64 = base64.b64encode(buffer.getvalue()).decode('utf-8').replace('\n', '')
+    # plt.show()
+
+    return render(request,"exam_app/result.html",{'image': image_base64}) 

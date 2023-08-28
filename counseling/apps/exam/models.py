@@ -1,6 +1,8 @@
 from django.db import models
+from apps.accounts.models import CustomUser
 
 class ResultExam(models.Model):
+    # user_registered=models.ForeignKey(CustomUser,on_delete=models.CASCADE,null=True)
     name=models.CharField(max_length=200)
     family=models.CharField(max_length=200)
     ress1=models.IntegerField()

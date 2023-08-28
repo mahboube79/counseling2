@@ -1,0 +1,12 @@
+{% extends 'mainTemplate.html' %}
+
+
+
+{%block home%}
+<div class="body_size container row">
+    <div class="col-8">نمایش توضیحات مربوط به این نمودار</div>
+    <div class="col-4">
+        <img src="data:image/png;base64,{{ image }}" alt="نمودار">
+    </div>
+</div>
+{%endblock home%}

@@ -13,5 +13,9 @@ urlpatterns = [
     path('exam6/',views.exam6,name="exam6"),
     path('exam7/',views.exam7,name="exam7"),
     path('exam8/',views.exam8,name="exam8"),
+    path('result',views.showResult,name="showResult"),
+    path('resschart',views.ressChart,name="ressChart"),
+    
+    
 
 ]

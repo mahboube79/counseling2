@@ -15,7 +15,7 @@ class Blog(models.Model):
         return self.blog_title
 #-----------------------------------------------------------------------------
 def upload_gallery_image(instance,filename):
-    return f"images/blog/gallery/{filename}"
+    return f"/media/images/blog/{filename}"
 
 class BlogGallery(models.Model):
     blog_image_name=models.ImageField(upload_to=upload_gallery_image,verbose_name="تصویر")
