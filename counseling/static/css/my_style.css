@@ -12,7 +12,6 @@
     font-family: 'nazanin';
     font-weight: bold;
     font-size: x-large;
-
 }
 .mmm{
     padding-right: -50px !important;
@@ -31,7 +30,7 @@
     text-align: justify;
     line-height: 45px;
     font-size: 20px;
-    /* word-spacing: 2px; */
+
 }
 
 .div-btnn{
@@ -39,8 +38,13 @@
     border-color: gold !important;
     height: 57px;
     width: 450px;
-}
+    box-shadow: 2px 2px 3px rgb(127, 127, 127);
 
+}
+.btn-size{
+    height: 57px !important;
+    width: 400px !important;
+}
 /* ---------------------Exams---------------------------------------- */
 
 label{
@@ -66,4 +70,52 @@ label{
 .in-bt{
     height: 57px;
     width: 450px !important;
+    box-shadow: 2px 2px 3px rgb(127, 127, 127);
+
 }
+
+
+
+
+/* ---------------------login and register---------------------------- */
+
+
+
+
+
+
+
+/* ---------------------blog app---------------------------- */
+
+.blogimg{
+    width: 280px;
+    height: 280px;
+    padding: 18px;
+}
+
+.blogdiv{
+    background-color: #fff;
+    border:1px solid rgb(95, 95, 95);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 3px 3px 15px rgb(127, 127, 127);
+}
+
+.title-h{
+    color: blue !important;
+    text-shadow:  1px 1px 2px rgb(127, 127, 127);
+
+ }
+.h3-font{
+    font-family: 'nazanin';
+    margin:10px 40px 25px auto ;
+    font-size: 40px;
+}
+.blog-p{
+    font-family: 'nazanin';
+    text-align: justify;
+    line-height: 30px;
+    font-size: 20px;
+}
+

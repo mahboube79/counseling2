@@ -1,11 +1,23 @@
 {% extends 'mainTemplate.html' %}
 
 {%block body%}
-<div class="container" style="margin-top:100px; width: 500px; height: 700px;" >
-    <form action="" method="post" >
-        {%csrf_token%}
-        {{form.as_p}}
-        <input class="btn btn-success btn-block" type="submit" value="ثبت نام">
-    </form>
+<div class="container-fluid body_size ">
+    <h1 class="text-center text-primary h-font" style="color:green !important;">ثبت نام کاربر</h1>
+    <div class=" container row ">
+        <div class="col-8 " style="padding-top:60px;">
+            <form class="container login_form " action="" method="post" style="width: 450px; ">
+                {%csrf_token%}
+                {{form.as_p}}
+    
+    <input class="btn btn-success btn-block" style="height: 50px !important; box-shadow: 2px 2px 3px rgb(127, 127, 127);" type="submit" value="ثبت نام">
+            </form>
+        </div>
+        <div class="col-1"></div>
+
+        <div class="col-2">
+            <img src="{{media_url}}/images/bg/3.png" alt="login photo">
+        </div>
+        <div class="col-1"></div>
+    </div>   
 </div>
 {%endblock body%}

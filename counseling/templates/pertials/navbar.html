@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <a href="#" class="navbar-brand">
+    <a href="{%url 'main:index'%}" class="navbar-brand">
         <img src="{{media_url}}/images/logo/logo_4.jpg" alt="آداک" width="30" height="30">
     </a>
-    <a class="navbar-brand" href="#">مرکز مشاوره آداک</a>
+    <a class="navbar-brand" href="{%url 'main:index'%}">مرکز مشاوره آداک</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -25,7 +25,7 @@
                 <a class="nav-link" href="#consultants">مشاورین</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#authors">مقالات</a>
+                <a class="nav-link" href="{%url 'main:showblog'%}">مقالات</a>
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">

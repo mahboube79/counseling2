@@ -6,7 +6,9 @@ from apps.accounts.models import CustomUser
 
 class Blog(models.Model):
     blog_title=models.CharField(max_length=200,verbose_name="عنوان مقاله")
-    blog_text= models.TextField(verbose_name="متن")
+    blog_summery=models.TextField(max_length=500,verbose_name="خلاصه مقاله")
+    blog_text= models.TextField(verbose_name="متن مقاله")
+    main_img=models.ImageField(upload_to='images/blogimg/',verbose_name="تصویر",default=None)
     register_date=models.DateTimeField(default=timezone.now)
     is_active=models.BooleanField(default=False)
     user_registered=models.ForeignKey(CustomUser, on_delete=models.CASCADE,null=True)
@@ -14,17 +16,6 @@ class Blog(models.Model):
     def __str__(self):
         return self.blog_title
 #-----------------------------------------------------------------------------
-def upload_gallery_image(instance,filename):
-    return f"/media/images/blog/{filename}"
-
-class BlogGallery(models.Model):
-    blog_image_name=models.ImageField(upload_to=upload_gallery_image,verbose_name="تصویر")
-    blog=models.ForeignKey(Blog,on_delete=models.CASCADE,null=True,related_name='images')
-
-
-#------------------------------------------------------------------------------    
-class Like(models.Model):
-    user_liked=models.ForeignKey(CustomUser,on_delete=models.CASCADE,null=True)
-    blog=models.ForeignKey(Blog,on_delete=models.CASCADE,null=True)
-
-#-----------------------------------------------------------------------------
+class Videos(models.Model):
+    title=models.CharField(max_length=200,verbose_name="عنوان ویدئو")
+    video=models.FileField(verbose_name="ویدئو")

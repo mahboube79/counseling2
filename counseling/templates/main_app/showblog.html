@@ -1,0 +1,30 @@
+{% extends 'mainTemplate.html' %}
+
+
+
+{% block body %}
+        <div class="body_size container">
+            <h1 class="h-font text-center title-h">لیست مقالات</h1>
+            {% for item in blogs %}
+                <div class="row blogdiv">
+                    <div class="col-4"> 
+                        <img src="{{media_url}}{{item.main_img}}" alt="تصویر مقاله" class="blogimg">
+                    </div>
+                    <div class="col-8">
+                        <h3 class="h3-font">{{item.blog_title}}</h3>
+                        <p class="blog-p">
+                            {{item.blog_summery}}
+                            <a href="">ادامه مطلب</a>
+                        </p>
+                        
+                    </div>
+    
+                </div>
+            {% endfor %}
+            <br><br>
+            <div class="btn btn-primary btn-block in-bt container">
+                <a class="butten-a btn-block" href="{%url 'main:registerblog'%}">ثبت مقاله جدید</a>
+            </div>
+        </div>
+    
+{% endblock body %}

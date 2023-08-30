@@ -3,22 +3,23 @@
 {% load crispy_forms_tags %}
 
 {% block body %}
-<h1 class="text-center text-primary" style="margin-top:100px">درج مقالات </h1>
-<div class="row justify-content-md-center " style="margin-top:100px; width: 500px; height: 700px;" >
-    <form action="" method="post" class="col-md-6" enctype="multipart/from-data">
+
+
+
+
+
+
+
+<div class="body_size container">
+    <h1 class="text-center text-primary h-font title-h">درج مقاله جدید</h1>
+    <form method="post" class="col-md-6" enctype="multipart/form-data" style="width: 500px;">
         {% csrf_token %}
+        {{form}}
         
-        {% comment %} {{blog_form |crispy}} {% endcomment %}
-        {{blog_form}}
-
-        {{image_formset.management_form}}
-        {% for form in image_formset %}
-            {% comment %} {{form | crispy}} {% endcomment %}
-            {{form }}
-
-        {% endfor %}
+        <br>
         <br>
         <input type="submit" value="ثبت مقاله" class="btn btn-success btn-block">
     </form>
 </div>
+
 {% endblock body %}

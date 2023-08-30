@@ -261,7 +261,7 @@ blockquote i {
 /* End Consultants */
 
 
-/* Author */
+/* blog */
 
 #authors .jumbotron {
     padding: 1rem 0 3rem;
@@ -276,7 +276,9 @@ blockquote i {
 .authors .card:hover {
     background-color: #169c88;
 }
-
+.card{
+    height: 500px;
+  }
 .authors .card:hover i,
 .authors .card:hover h3,
 .authors .card:hover p {
@@ -294,31 +296,14 @@ blockquote i {
     font-weight: 800;
 }
 
-.card-body h5 {
-    font-family: 'nazanin';
-    font-size: 1rem;
-    color: #000;
-    font-weight: bolder;
-}
-
 .card-body p {
     font-family: 'yekan';
     font-size: 0.9rem;
     text-align: justify;
 }
 
-.card-body i {
-    color: #000;
-    font-size: 1.8rem;
-}
 
-.card-body i:hover {
-    color: #000 !important;
-    font-size: 1.8rem;
-}
-
-
-/* End Author */
+/* End blog */
 
 
 /* Footer */
@@ -357,56 +342,3 @@ footer i:hover {
 .aryasoft-title {
     color: #1ebba3;
 }
-
-
-/* Fab Btn */
-
-.btn-group-fab {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    width: 50px;
-    height: auto;
-}
-
-.btn-group-fab .btn {
-    border-radius: 50%;
-    color: #fff;
-    position: absolute;
-    bottom: 0;
-}
-
-.btn-group-fab .btn-main {
-    width: 50px;
-    height: 50px;
-    z-index: 2;
-    line-height: 2;
-}
-
-.btn-group-fab .btn-sub {
-    right: 50%;
-    bottom: 0;
-    z-index: 1;
-    margin-right: -20px;
-    transition: all 0.6s;
-}
-
-.btn-group-fab.active .btn-sub:nth-child(2) {
-    bottom: 60px;
-}
-
-.btn-group-fab.active .btn-sub:nth-child(3) {
-    bottom: 110px;
-}
-
-.btn-group-fab.active .btn-sub:nth-child(4) {
-    bottom: 160px;
-}
-
-
-/* End Fab Btn */
-
-
-
-
-

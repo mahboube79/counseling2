@@ -203,163 +203,44 @@
 
 
 
-<!--مقالات از سمت جنگو-->
-    {% for blog in blogs %}
+
+    <!-- blog -->
+    <div id="authors" class="authors">
+        <div class="jumbotron">
+            <div class="col-12 text-center">
+                <h2 class="title">جدید ترین مقالات سایت</h2><div class="underline"></div>
+            </div>
+            <div class="container text-center py-3">
+                <div class="row">
+                    {% for blog in list_blog %}
+                        <div class="col-lg-3 col-md-3 author">
+                            <div class="card">
+                                <div class="card-body">
+                                    
+                                    <img src="{{media_url}}{{blog.main_img}}" class="img-fluid rounded-circle w-50" alt="تصویر">
+                                    
+                                    <h3>{{blog.blog_title}}</h3>
+                                    
+                                    <p class="justify-content-center">{{blog.blog_summery}}</p>
+                                    
+                                    <div class="flex-row"><a href="">ادامه مطلب</a></div>
+
+                                </div>
+                            </div>
+                        </div>
         
-    {% endfor %}
-        <!-- Author -->
-        <div id="authors" class="authors">
-            <div class="jumbotron">
-                <div class="col-12 text-center">
-                    <h2 class="title">نویسندگان مقالات</h2>
-                    <div class="underline"></div>
-                </div>
-                <div class="container text-center py-3">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 author">
-                            <div class="card">
-                                <div class="card-body">
-                                    <img src="../../media/images/persons/person5.jpg" class="img-fluid rounded-circle w-50" alt="" srcset="">
-                                    <h3>محمد قاسمی</h3>
-                                    <h5>نویسنده و تحلیل گر</h5>
-                                    <p>
-                                        متن پیشفرض
-                                    </p>
-                                    <div class="d-flex flex-row justify-content-center">
-                                        <div class="p-2">
-                                            <a href="#">
-                                                <i class="fab fa-twitter-square"></i>
-                                            </a>
-                                        </div>
-                                        <div class="p-2">
-                                            <a href="#">
-                                                <i class="fab fa-instagram"></i>
-                                            </a>
-                                        </div>
-                                        <div class="p-2">
-                                            <a href="#">
-                                                <i class="fab fa-facebook-square"></i>
-                                            </a>
-                                        </div>
-                                        <div class="p-2">
-                                            <a href="#">
-                                                <i class="fab fa-youtube-square"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 author">
-                            <div class="card">
-                                <div class="card-body">
-                                    <img src="../../media/images/persons/person6.jpg" class="img-fluid rounded-circle w-50" alt="" srcset="">
-                                    <h3>محمد قاسمی</h3>
-                                    <h5>نویسنده و تحلیل گر</h5>
-                                    <p>
-                                        متن پیشفرض
-                                    </p>
-                                    <div class="d-flex flex-row justify-content-center">
-                                        <div class="p-2">
-                                            <a href="#">
-                                                <i class="fab fa-twitter-square"></i>
-                                            </a>
-                                        </div>
-                                        <div class="p-2">
-                                            <a href="#">
-                                                <i class="fab fa-instagram"></i>
-                                            </a>
-                                        </div>
-                                        <div class="p-2">
-                                            <a href="#">
-                                                <i class="fab fa-facebook-square"></i>
-                                            </a>
-                                        </div>
-                                        <div class="p-2">
-                                            <a href="#">
-                                                <i class="fab fa-youtube-square"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 author">
-                            <div class="card">
-                                <div class="card-body">
-                                    <img src="../../media/images/persons/person7.jpg" class="img-fluid rounded-circle w-50" alt="" srcset="">
-                                    <h3>محمد قاسمی</h3>
-                                    <h5>نویسنده و تحلیل گر</h5>
-                                    <p>
-                                        متن پیشفرض
-                                    </p>
-                                    <div class="d-flex flex-row justify-content-center">
-                                        <div class="p-2">
-                                            <a href="#">
-                                                <i class="fab fa-twitter-square"></i>
-                                            </a>
-                                        </div>
-                                        <div class="p-2">
-                                            <a href="#">
-                                                <i class="fab fa-instagram"></i>
-                                            </a>
-                                        </div>
-                                        <div class="p-2">
-                                            <a href="#">
-                                                <i class="fab fa-facebook-square"></i>
-                                            </a>
-                                        </div>
-                                        <div class="p-2">
-                                            <a href="#">
-                                                <i class="fab fa-youtube-square"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 author">
-                            <div class="card">
-                                <div class="card-body">
-                                    <img src="../../media/images/persons/person8.jpg" class="img-fluid rounded-circle w-50" alt="" srcset="">
-                                    <h3>محمد قاسمی</h3>
-                                    <h5>نویسنده و تحلیل گر</h5>
-                                    <p>
-                                            متن پیشفرض
-                                    </p>
-                                    <div class="d-flex flex-row justify-content-center">
-                                        <div class="p-2">
-                                            <a href="#">
-                                                <i class="fab fa-twitter-square"></i>
-                                            </a>
-                                        </div>
-                                        <div class="p-2">
-                                            <a href="#">
-                                                <i class="fab fa-instagram"></i>
-                                            </a>
-                                        </div>
-                                        <div class="p-2">
-                                            <a href="#">
-                                                <i class="fab fa-facebook-square"></i>
-                                            </a>
-                                        </div>
-                                        <div class="p-2">
-                                            <a href="#">
-                                                <i class="fab fa-youtube-square"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}             
                 </div>
             </div>
         </div>
-        <!-- End Author -->
+    </div>
+
+
+        
+        <!-- End blog -->
     
         
 
-    {%endblock body%}
+{%endblock body%}
 
 
