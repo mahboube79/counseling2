@@ -1,0 +1,24 @@
+{% extends 'mainTemplate.html' %}
+{%block home%}
+<div class="body_size container">
+    <h1 class="h-font">آزمون رفتارهای تکراری</h1><br>
+    <div class="row container " >
+        <div class="col-md-7">
+            <p class="p-font">
+                محققان مرکز تحقیقات اوتیسم ولز دانشگاه کاردیف پرسشنامه ای ایجاد کرده اند
+                 که معیار بین المللی شناخته شده ای برای رفتارهای تکراری است.
+                  رفتارهای تکراری بخشی از معیارهای تشخیصی اوتیسم هستند 
+                  و شامل رفتارهای حرکتی، روال‌ها، پاسخ‌های حسی، علایق متمرکز و ترجیح یکسانی هستند.
+                   نکته مهم این است که این رفتارها در جمعیت عمومی به ویژه در کودکان خردسال،
+                    در سایر شرایط عصبی رشدی و در شرایط عصبی روانی نیز دیده می شود. 
+            </p><br>
+        </div>
+        <div class="col-md-4">
+            <img src="{{media_url}}images/img/1.jpg" class="img-mar" alt="photo">
+        </div>
+        <div class="btn btn-success btn-block div-btnn container" >
+            <a class="butten-a btn-block" href="{%url 'exam:autism'%}">شروع آزمون</a>
+        </div>
+    </div>
+</div>
+{%endblock home%}

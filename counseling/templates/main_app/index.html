@@ -144,57 +144,43 @@
                     <h2 class="title">مشاورین ما</h2>
                     <div class="underline"></div>
                 </div>
+
                 <div class="row m-0">
+                    {% for item in list_consultant %}
                     <div class="row col-6">
                         <div class="col-4">
-                            <img src="../../media/images/persons/person2.jpg" alt="" srcset="">
+                            <img src="{{media_url}}{{item.img}}" alt="{{item.name}}">
                         </div>
                         <div class="col-8">
                             <blockquote>
                                 <i class="fas fa-quote-left"></i>
-                                کارشناس ارشد وروانشناس بالینی
+                                {{item.education}}
                                 <br>
-                                برگزار کننده کارگاه های استعدادیابی و هوش افزایی، فرزند پروری،آموزش مهارت(کنترل خشم، نه گفتن،شناخت هیجان ها، خودکنترلی و..)به کودکان و نوجوانان.از جمله خدمات می توان به درمان افسردگی، وسواس، پرخاشگری، ترس، اختلالات یادگیری و مشکلات تحصیلی اشاره نمود.
+                                {{item.resume}}
                                 <hr class="consultant-hr">
                                 <cite>
-                                    - <strong>پویا نقدی</strong>، مشاور کودک و نوجوان
+                                    - <strong>{{item.name}}</strong>، {{item.education}}
                                 </cite>
                             </blockquote>
                         </div>
                     </div>
-                    <div class="row col-6">
-                        <div class="col-4">
-                            <img src="../../media/images/persons/person3.jpg" alt="" srcset="">
-                        </div>
-                        <div class="col-8">
-                            <blockquote>
-                                <i class="fas fa-quote-left"></i>
-                                کارشناس ارشد روانشناسی بالینی
-                                <br>
-                                برگزار کننده کارگاه های هوش افزای کودکان، تفسیر نقاشی کودکان، کارگاه های خلاقیت و مهارت های زندگی در کودک و نوجوان.از جمله خدمات می توان به درمان اختلالات نقص توجه و بیش فعالی با رویکرد درمانی؛ شناختی-رفتاری، بازی درمانی وسیستمی اشاره نمود.
-                                <hr class="consultant-hr">
-                                <cite>
-                                    - <strong>مهدی هادیانی</strong>، روانشناس کودک و نوجوان
-                                </cite>
-                            </blockquote>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
+
 
 
             <!-- About Consultants -->
             <div id="about" class="bg-white">
                 <div class="col-12 text-center area">
                     <h2>
-                        آیا می خواهید درباره مشاورین و دوره های ما بیشتر بدانید؟
+                        آیا می خواهید با مشاورین بیشتر ما آشنا شوید؟
                     </h2>
                     <p>
-                        ما سعی کرده ایم بهترین مشاورین را از سراسر کشور دورهم جمع کنیم تا بتوانیم باکیفیت ترین پکیج های آموزشی را با جامع‌ ترین سرفصل ها در اختیار شما قرار دهیم
+                        ما سعی کرده ایم بهترین مشاورین را با جدید ترین متدهای درمانی
+                        از سراسر کشور دورهم جمع کنیم تا بتوانیم با کیفیت ترین خدمات را در اختیار شما قرار دهیم
                     </p>
-                    <a href="#" class="btn btn-secondary">
-                        آشنایی بیشتر با مشاورین
-            </a>
+                    <a href="{%url 'main:consultant'%}" class="btn btn-secondary">آشنایی با مشاورین بیشتر</a>
                 </div>
             </div>
             <!-- End About Consultants -->

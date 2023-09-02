@@ -102,3 +102,84 @@ class Exam8(forms.Form):
                             widget=forms.RadioSelect(attrs={'class':'form-check-inline ch'}),choices=CHICES_EXAM)
     q4=forms.ChoiceField(label="بیشتر از کارهای گروهی، کارهای انفرادی را دوست دارد.",
                             widget=forms.RadioSelect(attrs={'class':'form-check-inline ch'}),choices=CHICES_EXAM)
+
+
+# ----------------------------------------------------------------------------------
+CHICES_EXAM2={
+    ("1","هرگز یا به ندرت"),
+    ("2","یک بار یا بیشتر در روز"),
+    ("3","15بار یا بیشتر در روز"),
+    ("4","30 بار یا بیشتر در روز")    
+}
+
+CHICES_EXAM3={
+    ("1","هرگز یا به ندرت"),
+    ("2","خفیف یا گاه به گاه"),
+    ("3","آشکار یا قابل ملاحظه"),
+    ("4","شدید یا حاد"),
+    
+}
+
+class Autism(forms.Form):
+    q1=forms.ChoiceField(label="دوست دارد اجسام را به صورت افقی یا با الگوی مشخصی مرتب کند؟",
+                        widget=forms.RadioSelect(attrs={'class':'form-check-inline ch'}),choices=CHICES_EXAM2)
+
+    q2=forms.ChoiceField(label="مکررا با اجسام ور می رود؟(مثلا دائما آنها را می چرخاند،یا با آن ها بازی می کند ، روی آنها ضربه می زند،آنها را می چرخاند)",
+                        widget=forms.RadioSelect(attrs={'class':'form-check-inline ch'}),choices=CHICES_EXAM2)
+    
+    q3=forms.ChoiceField(label="پشت سر هم دور خودش می چرخد؟",
+                        widget=forms.RadioSelect(attrs={'class':'form-check-inline ch'}),choices=CHICES_EXAM2)
+
+    q4=forms.ChoiceField(label="موقع نشستن یا ایستاده، رو به جلو و عقب یا به چپ و راست تاب میخورد؟",
+                        widget=forms.RadioSelect(attrs={'class':'form-check-inline ch'}),choices=CHICES_EXAM2)
+    
+    q5=forms.ChoiceField(label="به صورت تکرار شونده به اطراف حرکت می کندیا قدم می زند؟(مثلا رفت و برگشت در طول یک اتاق یا در یک مسیر ثابت بیرون از خانه)",
+                        widget=forms.RadioSelect(attrs={'class':'form-check-inline ch'}),choices=CHICES_EXAM2)
+    
+    q6=forms.ChoiceField(label="حرکات تکرار شونده دست و یا انگشت دارد؟(مثلا تکان دادن شدید دست ها یا انگشتان در هوا،دست تکان دادن یا تلنگر زدن با دست به صورت تکرار شونده)",
+                        widget=forms.RadioSelect(attrs={'class':'form-check-inline ch'}),choices=CHICES_EXAM2)
+    
+    q7=forms.ChoiceField(label="شیفتگی خاصی به بعضی اجسام دارد؟(مثلا قطار ،علائم جاده و خیابان و سایر موارد)",
+                        widget=forms.RadioSelect(attrs={'class':'form-check-inline ch'}),choices=CHICES_EXAM3)
+    
+    q8=forms.ChoiceField(label="دوست دارد از زوایای خاص یا غیر معمول به اشیاء نگاه کند؟",
+                        widget=forms.RadioSelect(attrs={'class':'form-check-inline ch'}),choices=CHICES_EXAM3)
+    
+    q9=forms.ChoiceField(label="علاقه خاصی به بوی افراد یا اشیاء دارد؟",
+                        widget=forms.RadioSelect(attrs={'class':'form-check-inline ch'}),choices=CHICES_EXAM3)
+    
+    q10=forms.ChoiceField(label="علاقه خاصی به لمس سطوح مختلف دارد؟",
+                        widget=forms.RadioSelect(attrs={'class':'form-check-inline ch'}),choices=CHICES_EXAM3)
+    
+    q11=forms.ChoiceField(label="چیز خاصی وجود دارد که بخواهد همه جا با خود همراه داشته باشد؟",
+                        widget=forms.RadioSelect(attrs={'class':'form-check-inline ch'}),choices=CHICES_EXAM3)
+    
+    q12=forms.ChoiceField(label="هر چیزی را جمع یا انباشته می کند؟",
+                        widget=forms.RadioSelect(attrs={'class':'form-check-inline ch'}),choices=CHICES_EXAM3)
+    
+    q13=forms.ChoiceField(label="اسرار دارد که چیز هایی در خانه بدون تغییر باقی بمانند؟(مثلا جای قرار گیری مبلمان و وسایل، یا مرتب کردن بعضی چیز ها به شکل ویژه)",
+                        widget=forms.RadioSelect(attrs={'class':'form-check-inline ch'}),choices=CHICES_EXAM3)
+    
+    q14=forms.ChoiceField(label="از ایجاد تغییرات جزئی در چیزها ناراحت می شود؟(مثلا ذرات کثیفی روی لباس ،خط و خراشیدگی جزئی روی اجسام)",
+                        widget=forms.RadioSelect(attrs={'class':'form-check-inline ch'}),choices=CHICES_EXAM3)
+    
+    q15=forms.ChoiceField(label="اسرار دارد که بخش های برنامه ی روزانه اش یکسان و بدون تغییر بماند؟",
+                        widget=forms.RadioSelect(attrs={'class':'form-check-inline ch'}),choices=CHICES_EXAM3)
+    
+    q16=forms.ChoiceField(label="اسرار دارد که کارهارا به شیوه ای خاص انجام دهد یا ترتیب چیز ها را عوض کند تا وقتی (درست) شود؟",
+                        widget=forms.RadioSelect(attrs={'class':'form-check-inline ch'}),choices=CHICES_EXAM3)
+    
+    q17=forms.ChoiceField(label="به صورت تکرار شونده به یک موسیقی گوش میدهد، یک بازی را انجام میدهد،یک ویدئو رو میبنید یا یک کتاب را میخواند؟",
+                        widget=forms.RadioSelect(attrs={'class':'form-check-inline ch'}),choices=CHICES_EXAM3)
+    
+    q18=forms.ChoiceField(label="به پوشیدن یک لباس اسرار دارد یا از پوشیدن لباس جدید خود داری می کند؟",
+                        widget=forms.RadioSelect(attrs={'class':'form-check-inline ch'}),choices=CHICES_EXAM3)
+    
+    q19=forms.ChoiceField(label="آیا بر خوردن یک غذای خاص یا طیف محدودی از غذاها در یک وعده اسرار دارد؟",
+                        widget=forms.RadioSelect(attrs={'class':'form-check-inline ch'}),choices=CHICES_EXAM3)
+    
+    q20=forms.ChoiceField(label="اگر آن ها را به حال خودشان بگذارید، چه نوع فعالیتی را برای سرگرم کردن خودشان انتخاب می کنند؟",
+                        widget=forms.RadioSelect(),choices={("1","تقریبا همیشه از مجموعه ای از فعالیت های تکرار شونده انتخاب می کند"),
+                                                                                                  ("2","چند موضوع مورد علاقه متفاوت و منعطف اما معمولا فعالیت های مشابه را انتخاب میکند"),
+                                                                                                  ("3","مجموعه ای از فعالیت های متنوع و منعطف به انتخاب خود")})
+    

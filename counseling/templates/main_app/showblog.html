@@ -14,12 +14,13 @@
                         <h3 class="h3-font">{{item.blog_title}}</h3>
                         <p class="blog-p">
                             {{item.blog_summery}}
-                            <a href="">ادامه مطلب</a>
+                            <a href="{%url 'main:mainblog'%}">ادامه مطلب</a>
                         </p>
-                        
                     </div>
-    
                 </div>
+                <form action="">
+                    <input type="text" value="{{item.blog_title}}" disable>
+                </form>
             {% endfor %}
             <br><br>
             <div class="btn btn-primary btn-block in-bt container">

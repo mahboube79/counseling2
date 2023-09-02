@@ -18,4 +18,21 @@ class Blog(models.Model):
 #-----------------------------------------------------------------------------
 class Videos(models.Model):
     title=models.CharField(max_length=200,verbose_name="عنوان ویدئو")
-    video=models.FileField(verbose_name="ویدئو")
+    video=models.FileField(upload_to='video/videos/',verbose_name="ویدئو")
+    poster=models.ImageField(upload_to='images/blogimg/',verbose_name="پوستر ویدئو",default=None)
+    register_date=models.DateTimeField(default=timezone.now)
+    is_active=models.BooleanField(default=False)
+    user_registered=models.ForeignKey(CustomUser, on_delete=models.CASCADE,null=True)
+    is_active=models.BooleanField(default=False)
+    register_date=models.DateTimeField(default=timezone.now)
+    
+    
+    
+    
+#-----------------------------------------------------------------------------
+class Consultant(models.Model):
+    name=models.CharField(max_length=100)
+    education=models.CharField(max_length=200)
+    resume=models.CharField(max_length=500)
+    img=models.ImageField(upload_to='images/counselimg/')
+    

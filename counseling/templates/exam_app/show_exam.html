@@ -7,11 +7,11 @@
     
     <div class="body_size container">
         <div class="row">
-            <h1 class="h-font">{{lable}} : <span id="ooo">{{titr}}</span></h1>
+            <h1 class="h-font"> {{lable}} : <span id="ooo"> {{titr}}</span></h1>
         </div>
-        <form action="" method="POST">
+        <form method="POST">
             {% csrf_token %}
-            <ol> 
+            <ol class="ol-li"> 
                 {{form.as_ul}}
             </ol>
             <br>

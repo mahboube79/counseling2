@@ -1,10 +1,11 @@
 from django.shortcuts import render , redirect
-from .forms import Exam1,Exam2,Exam3,Exam4,Exam5,Exam6,Exam7,Exam8
+from .forms import *
 from .models import ResultExam
 from django.contrib.auth.decorators import login_required
 import matplotlib.pyplot as plt
 from io import BytesIO
 import base64
+from django.conf import settings
 
 dic={
     'ress1':'',
@@ -17,11 +18,18 @@ dic={
     'ress8':'',    
 }
 
+def media_admin(request):
+    return {'media_url':settings.MEDIA_URL,}
+
 @login_required
 def all_exam(request):
-    return render(request,"exam_app/all_exam.html")
+    return render(request,"exam_app/all_exam.html",{'media_url':settings.MEDIA_URL})
     
-# ----------------------------------------------------------------------------------  
+# ----------------------------------------------------------------------------------
+def firstexam(request):
+    return render(request,"exam_app/exam1.html",{'media_url':settings.MEDIA_URL})
+# ----------------------------------------------------------------------------------
+
 def exam1(request):
     context={}
     if request.method == "POST":
@@ -203,6 +211,7 @@ def showResult(request):
     resultexam=ResultExam()
     resultexam.name=request.user.name
     resultexam.family=request.user.family
+    resultexam.user_registered=request.user.mobile_number
     resultexam.ress1=dic['ress1']
     resultexam.ress2=dic['ress2']
     resultexam.ress3=dic['ress3']
@@ -242,3 +251,28 @@ def ressChart(request):
     # plt.show()
 
     return render(request,"exam_app/result.html",{'image': image_base64}) 
+
+# ----------------------------------------------------------------------------------
+def secondexam(request):
+    return render(request,"exam_app/exam2.html",{'media_url':settings.MEDIA_URL})
+# ----------------------------------------------------------------------------------
+def autism(request):
+    context={}
+    if request.method == "POST":
+        form=Autism(request.POST)
+        n=1
+        sum=0
+        for item in form:
+            q=int(request.POST[f'q{n}'])
+            n+=1
+            sum+=q
+        dic['ress8']=sum    
+        return redirect('exam:showResult')
+    else:
+        form=Autism
+    context={
+        'form':form,
+        'lable':'آزمون رفتار های تکراری',
+        'titr':' '
+    }     
+    return render(request,"exam_app/show_exam.html",context)

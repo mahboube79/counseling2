@@ -1,0 +1,25 @@
+{% extends 'mainTemplate.html' %}
+{%block home%}
+<div class="body_size container">
+    <h1 class="h-font">آزمون استعداد و هوش برتر </h1><br>
+    <div class="row container " >
+        <div class="col-md-7">
+            <p class="p-font">استعداد یابی کودک می تواند از مهم ترین وظایفی باشد که همه والدین باید به آن توجه ویژه ای داشته باشند.
+                وقتی متوجه شوید فرزندانتان در چه زمینه ای با استعداد است 
+                دیگر او را به سمت انبوهی از کلاس های آموزشی سوق نمی دهید 
+                و او را دچار تشویش و سرگردانی نمی کنید، از همان کودکی با تشخیص درست، به
+                 استعداد وهوش های برتر او پی می برید و مطمئنا
+                از همان ابتدا کودک خود را در مسیر درست و متناسب با خودش هدایت می کنید.
+                <br>این پرسشنامه شامل 32 سوال چهارگزینه ای است که در قالب 8 آزمون طراحی شده است.
+                هر یک از سوالات را با دقت بخوانید و پاسخی که بیشترین تطبیق را با کودک شما دارد علامت بزنید.
+            </p><br>
+        </div>
+        <div class="col-md-4">
+            <img src="{{media_url}}images/login/4.jpg" class="img-mar" alt="photo">
+        </div>
+        <div class="btn btn-success btn-block div-btnn container" >
+            <a class="butten-a btn-block" href="{%url 'exam:exam1'%}">شروع آزمون</a>
+        </div>
+    </div>
+</div>
+{%endblock home%}

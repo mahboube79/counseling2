@@ -1,0 +1,24 @@
+{% extends 'mainTemplate.html' %}
+
+
+
+{% block body %}
+    <div class="body_size container">
+        {% for item in consul %}
+        <div class="row consul">
+            <div class="col-6">
+                <img width="500px" height="400px" src="{{media_url}}{{item.img}}" alt="{{item.name}}">
+            </div>
+            <div class="col-6">
+                <h2 class="h-font">{{item.name}}</h2>
+                <h5 class="h-font">
+                    {{item.education}}
+                </h5>
+                <p class="p-font">
+                    {{item.resume}}
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock body %}
