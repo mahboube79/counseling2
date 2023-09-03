@@ -9,5 +9,9 @@ urlpatterns=[
     path('mainblog/',views.mainblog,name="mainblog"),
     path('aboutus/',views.aboutus,name="aboutus"),
     path('consultant/',views.consultant,name="consultant"),
+    path('videos/',views.videos,name="videos"),
+    path('create_video/',views.create_video,name="create_video"),
+    
+    
 
 ]

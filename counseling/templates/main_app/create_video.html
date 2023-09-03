@@ -1,0 +1,17 @@
+{% extends 'mainTemplate.html' %}
+
+
+
+{% block body %}
+    <div class="body_size container">
+        <h1 class="text-center text-primary h-font title-h">بارگذاری ویدئو جدید</h1>
+        <form method="post" class="col-md-6" enctype="multipart/form-data" style="width: 500px;">
+            {% csrf_token %}
+            {{form}}
+            
+            <br>
+            <br>
+            <input type="submit" value="آپلود ویدئو" class="btn btn-success btn-block">
+        </form>
+    </div>
+{% endblock body %}

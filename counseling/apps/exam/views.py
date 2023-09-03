@@ -21,11 +21,11 @@ dic={
 def media_admin(request):
     return {'media_url':settings.MEDIA_URL,}
 
-@login_required
 def all_exam(request):
     return render(request,"exam_app/all_exam.html",{'media_url':settings.MEDIA_URL})
     
 # ----------------------------------------------------------------------------------
+@login_required
 def firstexam(request):
     return render(request,"exam_app/exam1.html",{'media_url':settings.MEDIA_URL})
 # ----------------------------------------------------------------------------------
@@ -253,6 +253,7 @@ def ressChart(request):
     return render(request,"exam_app/result.html",{'image': image_base64}) 
 
 # ----------------------------------------------------------------------------------
+@login_required
 def secondexam(request):
     return render(request,"exam_app/exam2.html",{'media_url':settings.MEDIA_URL})
 # ----------------------------------------------------------------------------------
@@ -266,8 +267,8 @@ def autism(request):
             q=int(request.POST[f'q{n}'])
             n+=1
             sum+=q
-        dic['ress8']=sum    
-        return redirect('exam:showResult')
+        ress=sum
+        return render(request,"exam_app/result2.html",{'ress':ress})
     else:
         form=Autism
     context={

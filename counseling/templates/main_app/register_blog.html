@@ -3,19 +3,28 @@
 {% load crispy_forms_tags %}
 
 {% block body %}
-
-
-
-
-
-
-
 <div class="body_size container">
     <h1 class="text-center text-primary h-font title-h">درج مقاله جدید</h1>
     <form method="post" class="col-md-6" enctype="multipart/form-data" style="width: 500px;">
         {% csrf_token %}
-        {{form}}
-        
+        <table>
+            <tr>
+                <td><label for="">عنوان مقاله</label></td>
+                <td>{{form.blog_title}}</td>
+            </tr>
+            <tr>
+                <td><label for="">خلاصه مقاله</label></td>
+                <td>{{form.blog_summery}}</td>
+            </tr>
+            <tr>
+                <td><label for="">متن مقاله</label></td>
+                <td>{{form.blog_text}}</td>
+            </tr>
+            <tr>
+                <td><label for="">بارگذاری تصویر مقاله</label></td>
+                <td>{{form.main_img}}</td>
+            </tr>
+        </table>
         <br>
         <br>
         <input type="submit" value="ثبت مقاله" class="btn btn-success btn-block">

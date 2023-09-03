@@ -19,7 +19,7 @@ class Blog(models.Model):
 class Videos(models.Model):
     title=models.CharField(max_length=200,verbose_name="عنوان ویدئو")
     video=models.FileField(upload_to='video/videos/',verbose_name="ویدئو")
-    poster=models.ImageField(upload_to='images/blogimg/',verbose_name="پوستر ویدئو",default=None)
+    poster=models.ImageField(upload_to='images/videoposter/',verbose_name="پوستر ویدئو",default=None)
     register_date=models.DateTimeField(default=timezone.now)
     is_active=models.BooleanField(default=False)
     user_registered=models.ForeignKey(CustomUser, on_delete=models.CASCADE,null=True)
