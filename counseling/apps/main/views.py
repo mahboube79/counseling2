@@ -20,9 +20,11 @@ class MainView(View):
         blogs=Blog.objects.all()
         list_blog=Blog.objects.order_by('register_date').reverse()[:4]
         list_consultant=Consultant.objects.order_by('id').reverse()[:2]
+        list_video=Videos.objects.order_by('id').reverse()[:4]
         context={
             'list_blog':list_blog,
-            'list_consultant':list_consultant
+            'list_consultant':list_consultant,
+            'list_video':list_video
             }
         return render(request,"main_app/index.html",context)
     
