@@ -1,6 +1,8 @@
 from django.db import models
 from django.utils import timezone
 from apps.accounts.models import CustomUser
+from django.urls import reverse
+
 
 # Create your models here.
 
@@ -13,8 +15,9 @@ class Blog(models.Model):
     is_active=models.BooleanField(default=False)
     user_registered=models.ForeignKey(CustomUser, on_delete=models.CASCADE,null=True)
     
-    def __str__(self):
-        return self.blog_title
+    # def get_absolute_url(self):
+    #     return reverse('article_detail',args=[str(self.id)])
+    
 #-----------------------------------------------------------------------------
 class Videos(models.Model):
     title=models.CharField(max_length=200,verbose_name="عنوان ویدئو")

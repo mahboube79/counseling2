@@ -6,6 +6,7 @@
         <div class="body_size container">
             <h1 class="h-font text-center title-h">لیست مقالات</h1>
             {% for item in blogs %}
+            {% if item.is_active %}
                 <div class="row blogdiv">
                     <div class="col-4"> 
                         <img src="{{media_url}}{{item.main_img}}" alt="تصویر مقاله" class="blogimg">
@@ -13,11 +14,13 @@
                     <div class="col-8">
                         <h3 class="h3-font">{{item.blog_title}}</h3>
                         <p class="blog-p">
-                            {{item.blog_summery}}
-                            <a href="{%url 'main:mainblog'%}">ادامه مطلب</a>
+                            {% comment %} {{item.blog_summery}} {% endcomment %}
+                            {{item.blog_text| truncatewords:30}}  
                         </p>
+                        <a href="{%url 'article_detail' item.blog_title %}">ادامه مطلب</a>
                     </div>
                 </div>
+            {% endif %}
             {% endfor %}
             <br><br>
             <div class="btn btn-primary btn-block in-bt container">

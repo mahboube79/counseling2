@@ -1,5 +1,5 @@
 from multiprocessing import context
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from django.views import View
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
@@ -30,15 +30,17 @@ class MainView(View):
     
 #-------------------------------------------------------------
 def showblog(request):
-    blogs=Blog.objects.all()
+    blogs=Blog.objects.order_by('id').reverse()
     context={
         "blogs":blogs,
         'media_url':settings.MEDIA_URL,
     }
     return render(request,"main_app/showblog.html",context)
 #-------------------------------------------------------------------------
-def mainblog(request):
-    return render(request,"main_app/mainblog.html")
+def article_detail(request,article_id):
+    article = get_object_or_404(Blog,blog_title=article_id)
+    print(article)
+    return render(request,"main_app/mainblog.html",{'article':article})
 #-------------------------------------------------------------------------
 @login_required
 def create_blog(request):
@@ -101,7 +103,7 @@ def create_video(request):
 
 #-------------------------------------------------------------------------
 def videos(request):
-    videos= Videos.objects.all().reverse()
+    videos= Videos.objects.order_by('id').reverse()
     context={
         'videos':videos,
         'media_url':settings.MEDIA_URL
@@ -111,7 +113,6 @@ def videos(request):
 
 def aboutus(request):
     return render(request,"main_app/aboutus.html",{'media_url':settings.MEDIA_URL})
-
 
 #-------------------------------------------------------------------------
 def consultant(request):

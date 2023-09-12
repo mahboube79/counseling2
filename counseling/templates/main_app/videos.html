@@ -7,11 +7,13 @@
             <h1 class="h-font text-center title-h">لیست آموزش ها</h1>
             <div class="row">
                 {% for item in videos %}
-                    <div class="col-3 wh">
-                        <video controls poster="{{media_url}}{{item.poster}}" width="300px" height="300px">
-                            <source src="{{media_url}}{{item.video}}" width="500px" height="500px">
-                        </video>
-                    </div>
+                {% if item.is_active %}
+                <div class="col-3 wh">
+                    <video controls poster="{{media_url}}{{item.poster}}" width="300px" height="300px">
+                        <source src="{{media_url}}{{item.video}}" width="500px" height="500px">
+                    </video>
+                </div>
+                {% endif %}
                 {% endfor %}
             </div>
             <br><br>

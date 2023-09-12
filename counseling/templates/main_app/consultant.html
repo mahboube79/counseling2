@@ -5,15 +5,15 @@
 {% block body %}
     <div class="body_size container">
         {% for item in consul %}
-        <div class="row consul">
-            <div class="col-6">
+        <div class="row" style="padding:20px;">
+            <div class="col-5">
                 <img width="500px" height="400px" src="{{media_url}}{{item.img}}" alt="{{item.name}}">
             </div>
-            <div class="col-6">
-                <h2 class="h-font">{{item.name}}</h2>
-                <h5 class="h-font">
+            <div class="col-6" style="padding:20px 100px 0 0;">
+                <h2 class="h-font"><b>{{item.name}}</b></h2>
+                <h6 class="h-font">
                     {{item.education}}
-                </h5>
+                </h5><br>
                 <p class="p-font">
                     {{item.resume}}
                 </p>
