@@ -17,7 +17,7 @@
                             {% comment %} {{item.blog_summery}} {% endcomment %}
                             {{item.blog_text| truncatewords:30}}  
                         </p>
-                        <a href="{%url 'article_detail' item.blog_title %}">ادامه مطلب</a>
+                        <a href="{%url 'main:article_detail' item.blog_title %}">ادامه مطلب</a>
                     </div>
                 </div>
             {% endif %}

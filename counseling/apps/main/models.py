@@ -26,8 +26,8 @@ class Videos(models.Model):
     register_date=models.DateTimeField(default=timezone.now)
     is_active=models.BooleanField(default=False)
     user_registered=models.ForeignKey(CustomUser, on_delete=models.CASCADE,null=True)
-    is_active=models.BooleanField(default=False)
-    register_date=models.DateTimeField(default=timezone.now)
+    
+    
     
     
     

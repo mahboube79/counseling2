@@ -4,18 +4,18 @@
 
 {% block body %}
         <div class="body_size container">
-            <div class="row" style="border:1px solid gray;">
+            <div style="border:1px solid gray;">
                 <div>
-                    <img src="" alt="">
+                    <img src="{{media_url}}{{article.main_img}}" width="100%" height="300px">
                 </div>
                 <div>
-                    <h1>
-
+                    <h1 style="font-family: 'yekan';">
+                        {{article.blog_title}}
                     </h1>
                 </div>
                 <div>
-                    <p>
-
+                    <p class="blog-p">
+                        {{article.blog_text}}
                     </p>
                 </div>
             </div>
